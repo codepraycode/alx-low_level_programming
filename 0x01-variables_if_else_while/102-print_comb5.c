@@ -15,7 +15,7 @@ int main(void)
 		if (bk == 1)
 			break;
 
-		for (j = 0; j <= 100; j++)
+		for (j = 1; j <= 100; j++)
 		{
 			int d1 = i % 10;
 			int d2 = i / 10;
@@ -29,7 +29,7 @@ int main(void)
 			putchar('0' + d1);
 			putchar(' ');
 			putchar('0' + d3);
-			putchar('0' + d4);	
+			putchar('0' + d4);
 
 			if ((i == 98 && j == 99))
 			{
