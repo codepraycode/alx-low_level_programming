@@ -8,37 +8,27 @@
 int main(void)
 {
 	int i, j;
-	int bk = 0;
 
-	for (i = 0; i <= 100; i++)
+	for (i = 0; i < 100; i++)
 	{
-		if (bk == 1)
-			break;
-
-		for (j = 1; j <= 100; j++)
+		for (j = 0; j < 100; j++)
 		{
-			int d1 = i % 10;
-			int d2 = i / 10;
-			int d3 = j / 10;
-			int d4 = j % 10;
-
-			if (d1 == d3 && d1 == d4 && d2 == d3 && d2 == d4)
-				continue;
-
-			putchar('0' + d2);
-			putchar('0' + d1);
-			putchar(' ');
-			putchar('0' + d3);
-			putchar('0' + d4);
-
-			if ((i == 98 && j == 99))
+			if (i < j)
 			{
-				bk = 1;
-				break;
-			}
 
-			putchar(',');
-			putchar(' ');
+				putchar((i / 10) + 48);
+				putchar((i % 10) + 48);
+				putchar(' ');
+				putchar((j / 10) + 48);
+				putchar((j % 10) + 48);
+
+				if (i != 98 || j != 99)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+
+			}
 		}
 
 	}
