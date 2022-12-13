@@ -27,5 +27,5 @@ void jack_bauer(void)
 		_putchar('\n');
 
 		seconds++;
-	} while ((minutes < 23));
+	} while ((minutes < 23) && (seconds < 59));
 }
