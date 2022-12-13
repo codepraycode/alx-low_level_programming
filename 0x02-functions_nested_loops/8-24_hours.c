@@ -8,14 +8,14 @@
 void jack_bauer(void)
 {
 	int minutes, seconds;
-	
+
 	minutes = 0;
 	seconds = 0;
-	
-	do{
+
+	do {
 		if (seconds == 60)
 		{
-			minutes++;
+			minutes += 1;
 			seconds = 0;
 		}
 
@@ -27,5 +27,5 @@ void jack_bauer(void)
 		_putchar('\n');
 
 		seconds++;
-	} while ((minutes < 24) && (seconds < 60));
+	} while ((minutes < 23));
 }
