@@ -22,13 +22,13 @@ void times_table(void)
 				{
 					_putchar(' ');
 					_putchar(' ');
-					_putchar(mul + '0');
+					_putchar(mul + 48);
 				}
 				else if (mul <= 99)
 				{
 					_putchar(' ');
-					_putchar((mul / 10) + '0');
-					_putchar((mul % 10) + '0');
+					_putchar((mul / 10) + 48);
+					_putchar((mul % 10) + 48);
 				}
 
 			}
