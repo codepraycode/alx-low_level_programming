@@ -9,6 +9,7 @@
 void print_to_98(int n)
 {
 	do {
+
 		if (n > 99)
 		{
 			int rem = n % 100;
@@ -24,6 +25,9 @@ void print_to_98(int n)
 		}
 		else
 			_putchar(n + '0');
+
+		if (n != 98)
+			_putchar(',');
 
 		if (n > 98)
 			n -= 1;
