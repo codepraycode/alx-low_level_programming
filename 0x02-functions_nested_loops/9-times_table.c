@@ -32,6 +32,8 @@ void times_table(void)
 				}
 
 			}
+			else
+				_putchar(mul + 48);
 
 			if (col < 9)
 				_putchar(',');
