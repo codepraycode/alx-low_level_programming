@@ -20,7 +20,7 @@ void print_alphabet(void)
  */
 void print_alphabet_x10(void)
 {
-	int count = 1;
+	int count = 0;
 
 	do {
 		print_alphabet();
