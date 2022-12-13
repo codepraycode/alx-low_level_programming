@@ -17,16 +17,25 @@ void times_table(void)
 
 			if (col > 0)
 			{
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(' ');
+
+				if (mul <= 9)
+				{
+					_putchar(' ');
+					_putchar(' ');
+				}
+				else if (mul <= 99)
+				{
+					_putchar(' ');
+				}
+
 			}
 
-			_putchar(mul + '0');
+			_putchar(mul + 48);
 
 			if (col < 9)
 				_putchar(',');
 
 		}
+		_putchar('\n');
 	}
 }
