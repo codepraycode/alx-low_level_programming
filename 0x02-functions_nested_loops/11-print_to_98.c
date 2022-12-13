@@ -9,7 +9,21 @@
 void print_to_98(int n)
 {
 	do {
-		_putchar(n + '0');
+		if (n > 99)
+		{
+			int rem = n % 100;
+
+			_putchar((n / 100) + '0');
+			_putchar((rem / 10) + '0');
+			_putchar((rem % 10) + '0');
+		}
+		else if ((n > 9))
+		{
+			_putchar((n / 10) + '0');
+			_putchar((n % 10) + '0');
+		}
+		else
+			_putchar(n + '0');
 
 		if (n > 98)
 			n -= 1;
