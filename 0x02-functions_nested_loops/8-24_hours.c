@@ -19,6 +19,9 @@ void jack_bauer(void)
 			seconds = 0;
 		}
 
+		if (minute == 24)
+			break;
+
 		_putchar((minutes / 10) + 48);
 		_putchar((minutes % 10) + 48);
 		_putchar(':');
@@ -27,5 +30,5 @@ void jack_bauer(void)
 		_putchar('\n');
 
 		seconds++;
-	} while ((minutes == 23) && (seconds == 59));
+	} while ((minutes < 24));
 }
