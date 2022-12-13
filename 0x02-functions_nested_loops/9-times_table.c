@@ -7,9 +7,11 @@
  */
 void times_table(void)
 {
-	for (int row = 0; row <= 9; row++)
+	int row, col;
+
+	for (row = 0; row <= 9; row++)
 	{
-		for (int col = 0; col <= 9; col++)
+		for (col = 0; col <= 9; col++)
 		{
 			int mul = row * col;
 
