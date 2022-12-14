@@ -17,7 +17,12 @@ void print_digits(int n)
 		n *= -1;
 	}
 
-	if (n > 99)
+	if (n == 0)
+	{
+		_putchar('0');
+	}
+
+	else if (n > 99)
 	{
 		int rem = n % 100;
 
