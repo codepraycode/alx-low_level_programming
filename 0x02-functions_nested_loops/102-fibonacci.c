@@ -24,8 +24,10 @@ int main(void)
 		b = d;
 
 
+		printf("%lu", d);
+
 		if (c < 50)
-			printf("%lu, ", d);
+			printf(", ");
 
 		c += 1;
 
