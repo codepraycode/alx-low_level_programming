@@ -3,10 +3,10 @@
 /**
  * print_digits - Print digits correctly
  * @n: the number to print
- *
+ * @init: 1 or 0, checks if its the starting column
  * Return: void, prints out the outputs
  */
-void print_digits(int n)
+void print_digits(int n, int init)
 {
 
 	int isNegative = n < 0 ? 1 : 0;
@@ -17,7 +17,7 @@ void print_digits(int n)
 		n *= -1;
 	}
 
-	if (n == 0)
+	if (init)
 	{
 		_putchar('0');
 	}
@@ -63,7 +63,9 @@ void print_times_table(int n)
 		{
 			int mul = row * col;
 
-			print_digits(mul);
+			int isInit = col == 0 ? 1 : 0;
+
+			print_digits(mul, isInit);
 
 			if (col < n)
 				_putchar(',');
