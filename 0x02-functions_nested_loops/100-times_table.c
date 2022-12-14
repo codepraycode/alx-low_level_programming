@@ -57,20 +57,25 @@ void print_times_table(int n)
 {
 	int row, col;
 
-	for (row = 0; row <= n; row++)
+	if ((n < 15) && (n > 0))
 	{
-		for (col = 0; col <= n; col++)
+
+		for (row = 0; row <= n; row++)
 		{
-			int mul = row * col;
+			for (col = 0; col <= n; col++)
+			{
+				int mul = row * col;
 
-			int isInit = col == 0 ? 1 : 0;
+				int isInit = col == 0 ? 1 : 0;
 
-			print_digits(mul, isInit);
+				print_digits(mul, isInit);
 
-			if (col < n)
-				_putchar(',');
+				if (col < n)
+					_putchar(',');
 
+			}
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
+
 }
