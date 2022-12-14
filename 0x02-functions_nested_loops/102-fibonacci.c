@@ -7,24 +7,25 @@
  */
 int main(void)
 {
-	int a, b, c;
+	long int a, b, d;
+	int c;
 
 	a = 1;
 	b = 2;
 
 	c = 2;
 
-	printf("%d, %d, ", a, b);
+	printf("%lu, %lu, ", a, b);
 
 	do {
-		int d = a + b;
+		d = a + b;
 
 		a = b;
 		b = d;
 
 
 		if (c < 50)
-			printf("%d, ", d);
+			printf("%lu, ", d);
 
 		c += 1;
 
