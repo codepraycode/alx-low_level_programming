@@ -26,7 +26,7 @@ int main(void)
 
 		printf("%lu", d);
 
-		if (c < 50)
+		if (c < 49)
 			printf(", ");
 
 		c += 1;
