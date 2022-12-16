@@ -11,9 +11,14 @@ int main(void)
 
 	for (i = 1; i <= 100; i++)
 	{
-		if ((i % 3) == 0)
+		int fizz = ((i % 3) == 0) ? 1 : 0;
+		int buzz = ((i % 5) == 0) ? 1 : 0;
+
+		if (fizz && buzz)
+			printf("FizzBuzz");
+		else if (fizz)
 			printf("Fizz");
-		else if ((i % 5) == 0)
+		else if (buzz)
 			printf("Buzz");
 		else
 			printf("%d", i);
