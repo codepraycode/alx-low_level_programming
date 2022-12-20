@@ -8,26 +8,33 @@
 /**
  * generate_password - Generate random passwords
  *
- * Return: a string of generated password
+ * Return: void
  */
-char *generate_password() {
-  static char charset[] = "0123456789"
+void generate_password() {
+	static char charset[] = "0123456789"
                          "abcdefghijklmnopqrstuvwxyz"
                          "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  char *password = malloc(LENGTH + 1);
+	char *password = malloc(LENGTH + 1);
+	
+	if (password == NULL) 
+	{
+		return;
+	}
 
-  if (password == NULL) {
-    return NULL;
-  }
+	int i;
+	
+	for (i = 0; i < LENGTH; i++) 
+	{
+		int index = rand() % NUM_CHARS;
+		password[i] = charset[index];
+	}
+	
+	password[LENGTH] = '\0';
 
-  for (int i = 0; i < LENGTH; i++) {
-    int index = rand() % NUM_CHARS;
-    password[i] = charset[index];
-  }
-
-  password[LENGTH] = '\0';
-
-  return password;
+	printf("%s\n", password);
+	
+	free(password);
+	
 }
 
 /**
@@ -35,12 +42,10 @@ char *generate_password() {
  *
  * Return: void
  * */
-int main(void) {
-  srand(time(NULL));
-
-  char *password = generate_password();
-  printf("%s\n", password);
-
-  free(password);
-  return 0;
+int main(void) 
+{
+	srand(time(NULL));
+	
+	generate_password();
+	return (0);
 }
