@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 /**
  * _puts - takes pointer to a string and prints the string
  * @str: string to print
@@ -7,9 +7,12 @@
  */
 void _puts(char *str)
 {
+	printf("%s\n", str);
+	/*
 	while (*str != '\0')
 	{
-		_putchar(*str);
+		printf("%c\n",*str);
 		str++;
 	}
+	*/
 }
