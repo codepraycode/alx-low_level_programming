@@ -21,7 +21,7 @@ int _strlen(char *s)
 
 
 /**
- * puts2 - Takes a pointer to a string and prints every other character
+ * puts_half - Takes a pointer to a string and prints half of the string
  * @str: a string pointer
  *
  * Return: void (nothing)
@@ -30,11 +30,9 @@ void puts_half(char *str)
 {
 	int len = _strlen(str);
 	int i;
+	int str_len = !((len % 2) == 0) ? (len - 1) / 2 : len / 2;
 
-	if (!((len % 2) == 0))
-		printf("%c", str[(len - 1) / 2]);
-
-	for (i = (len / 2); i < len; i++)
+	for (i = str_len; i < len; i++)
 	{
 		printf("%c", str[i]);
 	}
