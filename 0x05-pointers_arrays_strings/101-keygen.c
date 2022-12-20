@@ -15,13 +15,12 @@ void generate_password() {
                          "abcdefghijklmnopqrstuvwxyz"
                          "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char *password = malloc(LENGTH + 1);
-	
+	int i;
+
 	if (password == NULL) 
 	{
 		return;
 	}
-
-	int i;
 	
 	for (i = 0; i < LENGTH; i++) 
 	{
