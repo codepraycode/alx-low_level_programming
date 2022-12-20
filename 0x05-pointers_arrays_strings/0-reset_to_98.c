@@ -1,5 +1,5 @@
 /**
- * reset_to_98 - Function that takes a pointer to an int and update it points to 98
+ * reset_to_98 - takes a pointer to an int and update it points to 98
  * @n: pointer address
  *
  * Return: void (nothing)
