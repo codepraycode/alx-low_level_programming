@@ -23,14 +23,9 @@ void print_number(int n)
 
 	while (unit > 0)
 	{
-		if (unit > 9999)
+		if (unit > 999)
 		{
-			_putchar((n / 10000) + '0');
-			unit = 1000;
-		}
-		else if (unit > 999)
-		{
-			_putchar(((n % 10000) / 1000) + '0');
+			_putchar((n / 1000) + '0');
 			unit = 100;
 		}
 
