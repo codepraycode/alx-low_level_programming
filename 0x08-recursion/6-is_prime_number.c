@@ -1,5 +1,3 @@
-int tmp_prime(int n, int i);
-
 /**
  * _divisor - check if number is prime
  * @n: interger1 to check
