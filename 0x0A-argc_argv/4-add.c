@@ -16,11 +16,14 @@ int main(int argc, char *argv[])
 	{
 		j = atoi(argv[i]);
 
-		if (!(j) || (j < 1))
+		if (!(j))
 		{
 			printf("Error\n");
 			return (1);
 		}
+
+		if (j < 1)
+			continue;
 
 		add += j;
 	}
