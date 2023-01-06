@@ -22,9 +22,6 @@ int main(int argc, char *argv[])
 			return (1);
 		}
 
-		if (j < 1)
-			continue;
-
 		add += j;
 	}
 
