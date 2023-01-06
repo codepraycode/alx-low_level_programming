@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	{
 		j = atoi(argv[i]);
 
-		if (!(j))
+		if (!(j) || (j < 1))
 		{
 			printf("Error\n");
 			return (1);
