@@ -19,3 +19,8 @@ Gathered files from:
 > we can use `-rc` together with *ar*.
 - `ranlib` is used to index the library, indexing is to speed up the searching for symbols (e.g functions) withing the library so that the order won't matter.
 - using `-t` with *ar* will list the object files in the library.
+
+
+In this project there are bash scripts to create libraies
+- `create_library`: you'll pass the desired libray name, and it will create the library with that name.
+- `create_static_lib.sh`: this one is required by ht platform, so don't use it actually.
