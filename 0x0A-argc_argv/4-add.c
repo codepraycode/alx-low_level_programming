@@ -14,15 +14,15 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		j = atoi(argv[i]);
-
-		if (!(j))
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			printf("Error\n");
-			return (1);
+			if (!isdigit(argv[i][j]))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-
-		add += j;
+		add += atoi(argv[i]);
 	}
 
 	printf("%d\n", add);
