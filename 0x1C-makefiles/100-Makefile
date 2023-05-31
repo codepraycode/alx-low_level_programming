@@ -2,7 +2,7 @@
 # Compiler
 CC = gcc
 # Source files
-SRC = $(wildcard *.c)
+SRC = main.c school.c
 # Object files
 OBJ = $(SRC:.c=.o)
 # Executable name
